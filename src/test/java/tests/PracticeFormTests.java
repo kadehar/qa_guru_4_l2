@@ -43,7 +43,7 @@ public class PracticeFormTests {
 
         $("#submit").click();
 
-        sleep(500);
+        //sleep(500);
 
         // Check that the form opened
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
@@ -51,6 +51,9 @@ public class PracticeFormTests {
         // Verify results
         $(".table-responsive").shouldHave(text("Lea Test"), text("lea@test.tv"), text("Male"), text("13 July,1977"), text("Chemistry"), text("Sports, Reading, Music"), text("IMG_1285.jpg"), text("Very very long address for this test"), text("NCR Gurgaon"));
 
+        // Close the form
+        $("#closeLargeModal").click();
+        sleep(500);
 
 
 
