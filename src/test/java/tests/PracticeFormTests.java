@@ -9,25 +9,22 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeFormTests {
-
+     //Variables
+    String firstName = "Lea",
+            lastName = "Test",
+            email = "lea@test.tv",
+            phone = "1234567890",
+            month = "6",
+            year = "1977",
+            day = "13",
+            state = "NCR",
+            city = "Gurgaon",
+            subject = "Chemistry";
 
     @Test
     void dataAppearsInForm() {
         open("https://demoqa.com/automation-practice-form");
         $(".main-header").shouldHave(text("Practice Form"));
-
-        //Variables
-        String firstName = "Lea",
-                lastName = "Test",
-                email = "lea@test.tv",
-                phone = "1234567890",
-                month = "6",
-                year = "1977",
-                day = "13",
-                state = "NCR",
-                city = "Gurgaon",
-                subject = "Chemistry";
-
         //Set First name | Last name
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
@@ -55,8 +52,6 @@ public class PracticeFormTests {
 
         $("#submit").click();
 
-        //sleep(500);
-
         // Check that the form opened
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
@@ -75,8 +70,5 @@ public class PracticeFormTests {
         // Close the form
         $("#closeLargeModal").click();
         sleep(500);
-
-
-
     }
 }
