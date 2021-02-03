@@ -61,7 +61,16 @@ public class PracticeFormTests {
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
         // Verify results
-        $(".table-responsive").shouldHave(text(firstName + " " + lastName), text(email), text(phone), text("Male"), text("13 July,1977"), text(subject), text("Sports, Reading, Music"), text("IMG_1285.jpg"), text("Very very long address for this test"), text(state + " " + city));
+        $(".table-responsive").shouldHave(text(firstName + " " + lastName),
+                text(email),
+                text(phone),
+                text("Male"),
+                text("13 July,1977"),
+                text(subject),
+                text("Sports, Reading, Music"),
+                text("IMG_1285.jpg"),
+                text("Very very long address for this test"),
+                text(state + " " + city));
 
         // Close the form
         $("#closeLargeModal").click();
